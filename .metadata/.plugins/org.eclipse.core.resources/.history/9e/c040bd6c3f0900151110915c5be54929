@@ -1,0 +1,16 @@
+package com.camerameasure.math;
+
+/**
+ * 使用经纬度表达的点
+ * @author 
+ *
+ */
+public class LongLatPoint {
+	double dLongitude;//经度
+	double dLatitude;//纬度
+	LongLatPoint()
+	{
+		dLongitude =0.0;
+		dLatitude =0.0;
+	}
+}

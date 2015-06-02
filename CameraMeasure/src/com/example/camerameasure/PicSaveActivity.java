@@ -45,13 +45,8 @@ public class PicSaveActivity extends Activity {
 		mBtncancel = (Button) findViewById(R.id.cancel);
 		mBtnsave.setOnClickListener(click);
 		mBtncancel.setOnClickListener(click);
-/*		mBtnsave.setRotation(270);
-		mBtncancel.setRotation(270);*/
 		mPicView=(PicView)findViewById(R.id.picview1);
 		mPicView.setFile(Bytes2Bimap(data));
-		//mImageView = (ImageView) findViewById(R.id.imageview);
-		//mImageView.setImageBitmap(Bytes2Bimap(data));
-		//mImageView.setImageBitmap(zoomBitmap());
 	}
 
 	public Bitmap Bytes2Bimap(byte[] b) {
@@ -92,9 +87,6 @@ public class PicSaveActivity extends Activity {
         int height = bitmap.getHeight();
         Matrix matrix = new Matrix();
         matrix.setRotate(90);
-       // float scaleWidth = ((float) w / width);
-       // float scaleHeight = ((float) h / height);
-       // matrix.postScale(scaleWidth, scaleHeight);
         Bitmap newBmp = Bitmap.createBitmap(bitmap, 0, 0, width, height,
                         matrix, true);
         return newBmp;

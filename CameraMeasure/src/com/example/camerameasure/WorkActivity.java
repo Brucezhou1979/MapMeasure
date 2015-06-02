@@ -15,6 +15,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.camerameasure.math.PhotoCal;
 import com.constant.Constants;
 import com.tool.PicView;
 
@@ -22,8 +23,18 @@ public class WorkActivity extends Activity {
 	private PicView mPicView;
 	private Button mPre, mNext, mPre_Line, mNext_Line;
 	private String mFile;
+	/*
+	 * 计算所用的相片文件列表
+	 */
 	private ArrayList<String> mImageList;
+	
+	/*
+	 * 线的位置，记录高度值
+	 */
 	private int position = 0;
+	/**
+	 * 类型，1计算高度，2计算距离
+	 */
 	private int type;
 
 	@Override
@@ -119,17 +130,10 @@ public class WorkActivity extends Activity {
 					public void onClick(DialogInterface dialog, int which) {
 						// TODO Auto-generated method stub
 						double hh = 0;
-						if (type == 1)
-							hh = (Constants.M)
-									* (Constants.L1.get(0))
-									* (Constants.L1.get(1))
-									/ (Constants.f1 * Constants.L1.get(1) - Constants.f2
-											* Constants.L1.get(0));
+						if (type == 1)						
+							hh = PhotoCal.CalDisByTwoPicPixels(Constants.M,Constants.L1.get(0),Constants.L1.get(1),	Constants.f1,Constants.f2);							
 						else
-							hh = (Constants.M * Constants.f1 * Constants.L1
-									.get(1))
-									/ (Constants.f1 * Constants.L1.get(1) - Constants.f2
-											* Constants.L1.get(0));
+							hh = PhotoCal.CalHeightByTwoPicPixels(Constants.M, Constants.L1.get(0), Constants.L1.get(1), Constants.f1, Constants.f2);
 						Toast.makeText(getBaseContext(), "当前测量值为：" +Math.abs( hh )+ "米",
 								Toast.LENGTH_LONG).show();
 						MainActivity.mTime = Constants.getTime();

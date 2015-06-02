@@ -31,7 +31,5 @@ public class Draw extends ImageView {
 		super.onDraw(canvas);
 		canvas.drawCircle(canvas.getWidth() / 2, canvas.getHeight() / 2, 10,
 				paint);
-		// canvas.drawRect(new Rect(100, 200, 400, 500), paint);// 绘制矩形
-
 	}
 }

@@ -35,6 +35,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.camerameasure.math.PhotoCal;
+import com.camerameasure.math.LongLatPoint;
 import com.constant.Constants;
 import com.tool.ConfigHelper;
 import com.tool.PublicData;
@@ -62,7 +64,14 @@ public class MainActivity extends Activity {
 	private String provider;
 	int orientationSensor;
 	int accelerometerSensor;
+	/**
+	 * 重力传感器的值
+	 */
 	private float[] gravity = new float[3];
+	
+	/**
+	 * 陀螺仪的角度值
+	 */
 	private float[] angle = new float[3];
 	private int type = 0;
 
@@ -82,7 +91,20 @@ public class MainActivity extends Activity {
 	private Dialog mDialog;
 	private float mFocus = 0;
 	private float mCameraHeight;
+	
+	/**
+	 * GPS 获取的经纬高
+	 */
+	private double longi;
+	private double lati;
+	private double alti;
+	/**
+	 * 移动步长
+	 */
 	private float mWalkSize;
+	/**
+	 * CCD像元值
+	 */
 	private float CCD;
 
 	@Override
@@ -196,9 +218,9 @@ public class MainActivity extends Activity {
 
 	private void newLocationGPS(Location location) {
 		if (location != null) {
-			double longi = location.getLongitude();
-			double lati = location.getLatitude();
-			double alti = location.getAltitude();
+			longi = location.getLongitude();
+			lati = location.getLatitude();
+			alti = location.getAltitude();
 			double v = location.getSpeed();
 			double posi = location.getBearing();
 			longitudeValue.setText(String.valueOf(longi));
@@ -238,64 +260,7 @@ public class MainActivity extends Activity {
 		mDraw = (Draw) findViewById(R.id.mDraw);
 		surfaceView = (SurfaceView) findViewById(R.id.camera_surfaceview);
 		surfaceHolder = surfaceView.getHolder();
-		surfaceHolder.addCallback(surfaceCallback);/*
-													 * new Callback() {
-													 * 
-													 * @Override public void
-													 * surfaceCreated
-													 * (SurfaceHolder holder) {
-													 * try { camera =
-													 * Camera.open(); //
-													 * 设置Camera的角度/方向
-													 * camera.setDisplayOrientation
-													 * (90); Camera.Parameters
-													 * parameters =
-													 * camera.getParameters();
-													 * parameters
-													 * .setPreviewFrameRate(5);
-													 * // 每秒5帧
-													 * parameters.setPictureFormat
-													 * (ImageFormat.JPEG);//
-													 * 设置照片的输出格式
-													 * parameters.set("jpeg-quality"
-													 * , 95);// 照片质量
-													 * camera.setParameters
-													 * (parameters);
-													 * camera.setPreviewDisplay
-													 * (holder); isPreview =
-													 * true;
-													 * camera.startPreview(); }
-													 * catch (IOException e) {
-													 * e.printStackTrace(); }
-													 * surfaceHolder = holder;
-													 * 
-													 * mThread = new
-													 * DrawThread(surfaceHolder
-													 * ); mThread.setRun(true);
-													 * mThread.start();
-													 * 
-													 * }
-													 * 
-													 * @Override public void
-													 * surfaceChanged
-													 * (SurfaceHolder holder,
-													 * int format, int width,
-													 * int height) {
-													 * surfaceHolder = holder; }
-													 * 
-													 * @Override public void
-													 * surfaceDestroyed
-													 * (SurfaceHolder holder) {
-													 * // mThread.setRun(false);
-													 * if (camera != null) { if
-													 * (isPreview) {
-													 * camera.stopPreview();
-													 * isPreview = false; }
-													 * camera.release(); camera
-													 * = null; // 记得释放Camera }
-													 * surfaceView = null;
-													 * surfaceHolder = null; } }
-													 */
+		surfaceHolder.addCallback(surfaceCallback);
 
 		// 开发时建议设置
 		// This method was deprecated in API level 11. this is ignored, this
@@ -400,7 +365,7 @@ public class MainActivity extends Activity {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
-			case R.id.fixed_point:
+			case R.id.fixed_point:///设置定位功能
 				mTime = Constants.getTime();
 				mBtnFinish.setVisibility(View.GONE);
 				type = 0;
@@ -415,10 +380,9 @@ public class MainActivity extends Activity {
 						.getColor(R.color.white));
 				mBtnArea.setTextColor(getResources().getColor(R.color.white));
 				break;
-			case R.id.height:
+			case R.id.height://设置高度计算功能
 				a = 0;
 				mTime = Constants.getTime();
-				// mBtnFinish.setVisibility(View.VISIBLE);
 				type = 1;
 				mBtnPoint.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnHeight
@@ -531,7 +495,7 @@ public class MainActivity extends Activity {
 
 	private void isFinish() {
 		switch (type) {
-		case 1:
+		case 1://高度量测
 			if (a > 1) {
 				a = 0;
 				gotoWork();
@@ -539,7 +503,7 @@ public class MainActivity extends Activity {
 				Toast.makeText(getBaseContext(), "样本数量至少为两个！",
 						Toast.LENGTH_SHORT).show();
 			break;
-		case 2:
+		case 2://距离量测
 			if (b > 1) {
 				b = 0;
 				gotoWork();
@@ -547,7 +511,7 @@ public class MainActivity extends Activity {
 				Toast.makeText(getBaseContext(), "样本数量至少为两个！",
 						Toast.LENGTH_SHORT).show();
 			break;
-		case 3:
+		case 3://面积量测
 			if (c > 1) {
 				// gotoWorkother();
 				Toast.makeText(MainActivity.this, "该功能正在开发中", Toast.LENGTH_LONG)
@@ -559,15 +523,12 @@ public class MainActivity extends Activity {
 		default:
 			break;
 		}
-
 	}
 
-	/*
-	 * private void gotoWorkother() { Intent intent = new Intent();
-	 * intent.setClass(getBaseContext(), OtherWorkActivity.class);
-	 * intent.putExtra(Constants.PATH, PATH); startActivity(intent); }
+	/**
+	 * 这里用来跳转到测高以及测距离的功能中
+	 * 包括，对拍的相片进行相应的处理，如画上边界线与下边界线
 	 */
-
 	private void gotoWork() {
 		if (Constants.L1.size() > 0) {
 			Constants.L1.clear();
@@ -582,7 +543,6 @@ public class MainActivity extends Activity {
 
 	private void takePicture() {
 		camera.takePicture(null, null, mPictureCallback);
-		// camera.stopPreview();
 	}
 
 	Camera.PictureCallback mPictureCallback = new PictureCallback() {
@@ -633,7 +593,15 @@ public class MainActivity extends Activity {
 			Toast.makeText(getBaseContext(), "保存成功！", Toast.LENGTH_SHORT)
 					.show();
 			switch (type) {
-			case 1:
+			case 0://计算定点
+			{
+				///使用相机的高度与方向位计算中心点的距离
+				double dL = PhotoCal.CalDistanceByAzimuth(mCameraHeight, angle[1]);
+				LongLatPoint pt = new LongLatPoint();
+				pt= PhotoCal.CalPosbyCurrentGPSPoint(longi, lati, dL, angle[1]);
+				break;
+			}
+			case 1://如果大于1张时，计算距离
 				a++;
 				if (a > 1) {
 					Constants.f2 = mFocus;
@@ -642,7 +610,7 @@ public class MainActivity extends Activity {
 				}
 				Constants.f1 = mFocus;
 				break;
-			case 2:
+			case 2://如果大于1张相片时，计算高度
 				b++;
 				if (b > 1) {
 					Constants.f2 = mFocus;
@@ -651,7 +619,7 @@ public class MainActivity extends Activity {
 				}
 				Constants.f1 = mFocus;
 				break;
-			case 3:
+			case 3://面积公式还需要开发
 				Toast.makeText(MainActivity.this, "该功能正在开发中", Toast.LENGTH_LONG)
 						.show();
 				break;
@@ -737,21 +705,4 @@ public class MainActivity extends Activity {
 			Back();
 		return super.onKeyDown(keyCode, event);
 	}
-
-	/*
-	 * @Override public void onConfigurationChanged(Configuration newConfig) {
-	 * super.onConfigurationChanged(newConfig); if
-	 * (this.getResources().getConfiguration().orientation ==
-	 * Configuration.ORIENTATION_LANDSCAPE) { // land donothing is ok
-	 * mBtnPoint.setRotation(90) ; mBtnHeight.setRotation(90);
-	 * mBtnDistance.setRotation(90); mBtnArea.setRotation(90);
-	 * mBtnSave.setRotation(90); mBtnFinish.setRotation(90); } else if
-	 * (this.getResources().getConfiguration().orientation ==
-	 * Configuration.ORIENTATION_PORTRAIT) { // port donothing is ok
-	 * mBtnPoint.setRotation(-90) ; mBtnHeight.setRotation(-90);
-	 * mBtnDistance.setRotation(-90); mBtnArea.setRotation(-90);
-	 * mBtnSave.setRotation(-90); mBtnFinish.setRotation(-90); }
-	 * 
-	 * }
-	 */
 }

@@ -13,6 +13,11 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.ImageView;
 
+/**
+ * 相片显示类
+ * @author Administrator
+ *
+ */
 public class PicView extends ImageView {
 	private Bitmap mCharBitmap = null;
 	private Bitmap bitmap = null;
@@ -20,7 +25,7 @@ public class PicView extends ImageView {
 	private Paint mFillBlackPaint = null;
 	private Paint mPaint = new Paint(1);
 	private Canvas mCanvas, mCanvas1;
-	// 二次贝塞尔，实现平滑曲线；previousX, previousY为操作点，cX, cY为终点
+	// 浜屾璐濆灏旓紝瀹炵幇骞虫粦鏇茬嚎锛沺reviousX, previousY涓烘搷浣滅偣锛宑X, cY涓虹粓鐐�
 	private float downX = 0, downY = 0, upX = 0, upY = 0, lateX = 0, lateY = 0;
 	private Matrix matrix = new Matrix();
 	private int linestate = -1;
@@ -107,15 +112,15 @@ public class PicView extends ImageView {
 
 	public boolean onTouchEvent(MotionEvent event) {
 		int action = event.getAction();
-		// 判斷不同狀態
+		// 鍒ゆ柗涓嶅悓鐙�鎱�
 		switch (action) {
 		case MotionEvent.ACTION_DOWN:
-			// 按下時記錄座標
+			// 鎸変笅鏅傝閷勫骇妯�
 			downX = event.getX();
 			downY = event.getY();
 			break;
 
-		case MotionEvent.ACTION_MOVE: // 移動過程中，不斷繪製Line
+		case MotionEvent.ACTION_MOVE: // 绉诲嫊閬庣▼涓紝涓嶆柗绻＝Line
 			/*
 			 * upX = event.getX(); upY = event.getY(); mCanvas.drawLine(downX,
 			 * 0, upX, mCanvas.getHeight(), this.mPaint); invalidate(); downX =
@@ -123,7 +128,7 @@ public class PicView extends ImageView {
 			 */
 
 			switch (linestate) {
-			case 0:// 左边线
+			case 0:// 宸﹁竟绾�
 				upX = event.getX();
 				upY = event.getY();
 				mCanvas = null;
@@ -134,7 +139,7 @@ public class PicView extends ImageView {
 				mCanvas.drawLine(upX, 0, upX, mCanvas.getHeight(), this.mPaint);
 				invalidate();
 				break;
-			case 1:// 右边线
+			case 1:// 鍙宠竟绾�
 				lateX = event.getX();
 				lateY = event.getY();
 				mCanvas1 = null;
@@ -146,7 +151,7 @@ public class PicView extends ImageView {
 						this.mPaint);
 				invalidate();
 				break;
-			case 2:// 上边线
+			case 2:// 涓婅竟绾�
 				upX = event.getX();
 				upY = event.getY();
 				mCanvas = null;
@@ -157,7 +162,7 @@ public class PicView extends ImageView {
 				mCanvas.drawLine(0, upY, mCanvas.getWidth(), upY, this.mPaint);
 				invalidate();
 				break;
-			case 3:// 下边线
+			case 3:// 涓嬭竟绾�
 				lateX = event.getX();
 				lateY = event.getY();
 				mCanvas1 = null;
@@ -176,9 +181,9 @@ public class PicView extends ImageView {
 			break;
 
 		case MotionEvent.ACTION_UP:
-			// 停止時，記錄座標
+			// 鍋滄鏅傦紝瑷橀寗搴ф
 			switch (linestate) {
-			case 0:// 左边线
+			case 0:// 宸﹁竟绾�
 				mCanvas = null;
 				bitmap = null;
 				bitmap = Bitmap.createBitmap(mCharBitmap.getWidth(),
@@ -186,7 +191,7 @@ public class PicView extends ImageView {
 				mCanvas = new Canvas(bitmap);
 				mCanvas.drawLine(upX, 0, upX, mCanvas.getHeight(), this.mPaint);
 				break;
-			case 1:// 右边线
+			case 1:// 鍙宠竟绾�
 				mCanvas1 = null;
 				bitmap1 = null;
 				bitmap1 = Bitmap.createBitmap(mCharBitmap.getWidth(),
@@ -195,7 +200,7 @@ public class PicView extends ImageView {
 				mCanvas1.drawLine(lateX, 0, lateX, mCanvas1.getHeight(),
 						this.mPaint);
 				break;
-			case 2:// 上边线
+			case 2:// 涓婅竟绾�
 				upX = event.getX();
 				upY = event.getY();
 				mCanvas = null;
@@ -205,7 +210,7 @@ public class PicView extends ImageView {
 				mCanvas = new Canvas(bitmap);
 				mCanvas.drawLine(0, upY, mCanvas.getWidth(), upY, this.mPaint);
 				break;
-			case 3:// 下边线
+			case 3:// 涓嬭竟绾�
 				lateX = event.getX();
 				lateY = event.getY();
 				mCanvas1 = null;
@@ -227,7 +232,7 @@ public class PicView extends ImageView {
 		default:
 			break;
 		}
-		// 返回true表示，一旦事件开始就要继续接受触摸事件
+		// 杩斿洖true琛ㄧず锛屼竴鏃︿簨浠跺紑濮嬪氨瑕佺户缁帴鍙楄Е鎽镐簨浠�
 		return true;
 	}
 
@@ -241,8 +246,8 @@ public class PicView extends ImageView {
 
 	public void drawImage(Canvas canvas, Bitmap blt, int x, int y, int w,
 			int h, int bx, int by) {
-		Rect src = new Rect();// 图片 >>原矩形
-		Rect dst = new Rect();// 屏幕 >>目标矩形
+		Rect src = new Rect();// 鍥剧墖 >>鍘熺煩褰�
+		Rect dst = new Rect();// 灞忓箷 >>鐩爣鐭╁舰
 
 		src.left = bx;
 		src.top = by;
@@ -253,8 +258,8 @@ public class PicView extends ImageView {
 		dst.top = y;
 		dst.right = x + w;
 		dst.bottom = y + h;
-		// 画出指定的位图，位图将自动--》缩放/自动转换，以填补目标矩形
-		// 这个方法的意思就像 将一个位图按照需求重画一遍，画后的位图就是我们需要的了
+		// 鐢诲嚭鎸囧畾鐨勪綅鍥撅紝浣嶅浘灏嗚嚜鍔�--銆嬬缉鏀�/鑷姩杞崲锛屼互濉ˉ鐩爣鐭╁舰
+		// 杩欎釜鏂规硶鐨勬剰鎬濆氨鍍� 灏嗕竴涓綅鍥炬寜鐓ч渶姹傞噸鐢讳竴閬嶏紝鐢诲悗鐨勪綅鍥惧氨鏄垜浠渶瑕佺殑浜�
 		canvas.drawBitmap(blt, null, dst, null);
 		src = null;
 		dst = null;
