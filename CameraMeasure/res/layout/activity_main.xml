@@ -1,0 +1,326 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".CameraActivity" >
+
+    <!--
+         <SurfaceView
+        android:id="@+id/camera_surfaceview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    -->
+
+    <FrameLayout
+        android:id="@+id/myFramelayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <SurfaceView
+            android:id="@+id/camera_surfaceview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:visibility="visible" />
+
+        <com.example.camerameasure.Draw
+            android:id="@+id/mDraw"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/fixed_point"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/btn_background_up"
+                android:text="定点"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/height"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/btn_background_up"
+                android:text="测高"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/distance"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/btn_background_up"
+                android:text="测距"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/area"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/btn_background_up"
+                android:text="测面积"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="15dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_background_up"
+        android:text="结束"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/set"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="15dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_background_up"
+        android:text="设置"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/photo"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_margin="15dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn_background_up"
+        android:text="拍照"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/xAcceleValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/xAcceleLabel"
+        android:layout_toRightOf="@+id/xAcceleLabel"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/yAcceleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/xAcceleLabel"
+        android:layout_below="@+id/xAcceleLabel"
+        android:text="@string/yAccele" />
+
+    <TextView
+        android:id="@+id/yAcceleValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/yAcceleLabel"
+        android:layout_alignBottom="@id/yAcceleLabel"
+        android:layout_alignLeft="@id/xAcceleValue"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/zAcceleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/yAcceleLabel"
+        android:layout_below="@id/yAcceleLabel"
+        android:text="@string/zAccele" />
+
+    <TextView
+        android:id="@+id/zAxisValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/zAcceleLabel"
+        android:layout_alignLeft="@id/yAcceleValue"
+        android:layout_below="@id/yAcceleLabel"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/zAcceleLabel"
+        android:layout_below="@id/zAcceleLabel"
+        android:layout_marginTop="19dp"
+        android:text="@string/longitude" />
+
+    <TextView
+        android:id="@+id/longitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/longitude"
+        android:layout_below="@id/zAcceleLabel"
+        android:layout_toRightOf="@id/longitude"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/longitude"
+        android:layout_below="@id/longitude"
+        android:text="@string/latitude" />
+
+    <TextView
+        android:id="@+id/latitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/latitude"
+        android:layout_below="@id/longitude"
+        android:layout_toRightOf="@id/latitude"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/altitude"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/latitude"
+        android:layout_below="@id/latitude"
+        android:text="@string/altitude" />
+
+    <TextView
+        android:id="@+id/altitudeValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/altitude"
+        android:layout_below="@id/latitude"
+        android:layout_toRightOf="@id/altitude"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/velocity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/altitude"
+        android:layout_below="@id/altitude"
+        android:text="@string/velocity" />
+
+    <TextView
+        android:id="@+id/velocityValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/velocity"
+        android:layout_below="@id/altitude"
+        android:layout_toRightOf="@id/velocity"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/bearing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/velocity"
+        android:layout_below="@id/velocity"
+        android:text="@string/bearing" />
+
+    <TextView
+        android:id="@+id/bearingValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/bearing"
+        android:layout_below="@id/velocity"
+        android:layout_toRightOf="@id/bearing"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/headingLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/bearing"
+        android:layout_below="@id/bearing"
+        android:layout_marginTop="19dp"
+        android:text="@string/heading" />
+
+    <TextView
+        android:id="@+id/headingValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/headingLabel"
+        android:layout_toRightOf="@id/headingLabel"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/pitchLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/headingLabel"
+        android:layout_below="@id/headingLabel"
+        android:text="@string/pitch" />
+
+    <TextView
+        android:id="@+id/pitchValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/pitchLabel"
+        android:layout_toRightOf="@id/pitchLabel"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/rollLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/pitchLabel"
+        android:layout_below="@id/pitchLabel"
+        android:text="@string/roll" />
+
+    <TextView
+        android:id="@+id/rollValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/rollLabel"
+        android:layout_toRightOf="@id/rollLabel"
+        android:text="@string/empty" />
+
+    <TextView
+        android:id="@+id/xAcceleLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/finish"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginTop="26dp"
+        android:text="@string/xAccele" />
+
+</RelativeLayout>

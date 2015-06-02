@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+E:\JavaWorkSpaces\MapMeasure\.metadata\.plugins\org.eclipse.jdt.core
+3552141007.index
+407712626.index
+1138031070.index

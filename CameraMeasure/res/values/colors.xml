@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue">#2361c3</color>
+    <!-- 蓝色 -->
+    <color name="white">#FFFFFF</color>
+    <color name="text_color">#576c97</color>
+    <color name="background">#E6E8E2</color>
+ <!-- 应用的背景色 -->
+
+</resources>
