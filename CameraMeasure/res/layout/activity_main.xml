@@ -249,28 +249,11 @@
         android:text="@string/empty" />
 
     <TextView
-        android:id="@+id/bearing"
+        android:id="@+id/headingLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@id/velocity"
         android:layout_below="@id/velocity"
-        android:text="@string/bearing" />
-
-    <TextView
-        android:id="@+id/bearingValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/bearing"
-        android:layout_below="@id/velocity"
-        android:layout_toRightOf="@id/bearing"
-        android:text="@string/empty" />
-
-    <TextView
-        android:id="@+id/headingLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/bearing"
-        android:layout_below="@id/bearing"
         android:layout_marginTop="19dp"
         android:text="@string/heading" />
 

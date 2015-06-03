@@ -29,6 +29,7 @@ public class PicSaveActivity extends Activity {
 	//private ImageView mImageView;
 	private File file;
     private PicView mPicView;
+    public static String TXTNAME;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -60,7 +61,8 @@ public class PicSaveActivity extends Activity {
 	
 
 	private void savePic() {
-		file = new File(PATH, Constants.getTime() + ".jpg");
+		TXTNAME=Constants.getTime();
+		file = new File(PATH, TXTNAME + ".jpg");
 	    File f=new File(PATH);
 	    if(!f.exists())
 	    	f.mkdirs();

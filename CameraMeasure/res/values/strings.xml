@@ -10,9 +10,8 @@
     <string name="zAccele">Z Acceleration:</string>
     <string name="longitude">Longitude:</string>
     <string name="latitude">Latitude:</string>
-    <string name="altitude">Altitude:</string>
-    <string name="velocity">Velocity:</string>
-    <string name="bearing">Bearing:</string>
+    <string name="altitude">TargetLongitude:</string>
+    <string name="velocity">TargetLatitude:</string>
     <string name="heading">HeadingAngle:</string>
     <string name="pitch">PitchAngle:</string>
     <string name="roll">RollAngle:</string>

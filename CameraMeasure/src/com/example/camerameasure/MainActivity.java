@@ -39,6 +39,7 @@ import com.camerameasure.math.PhotoCal;
 import com.camerameasure.math.LongLatPoint;
 import com.constant.Constants;
 import com.tool.ConfigHelper;
+import com.tool.FileHelper;
 import com.tool.PublicData;
 
 public class MainActivity extends Activity {
@@ -80,9 +81,9 @@ public class MainActivity extends Activity {
 	private TextView zAcceleValue;
 	private TextView longitudeValue;
 	private TextView latitudeValue;
-	private TextView altitudeValue;
-	private TextView velocityValue;
-	private TextView bearingValue;
+	private TextView targetLng;
+	private TextView targetLat;
+	// private TextView bearingValue;
 	private TextView headingAngle;
 	private TextView pitchAngle;
 	private TextView rollAngle;
@@ -91,7 +92,8 @@ public class MainActivity extends Activity {
 	private Dialog mDialog;
 	private float mFocus = 0;
 	private float mCameraHeight;
-	
+
+	private FileHelper mFileHelper;
 	/**
 	 * GPS 获取的经纬高
 	 */
@@ -177,6 +179,16 @@ public class MainActivity extends Activity {
 				headingAngle.setText(String.valueOf(angle[0]));
 				pitchAngle.setText(String.valueOf(angle[1]));
 				rollAngle.setText(String.valueOf(angle[2]));
+				targetLng
+						.setText(String.valueOf(PhotoCal
+								.CalPosbyCurrentGPSPoint(longi, lati, PhotoCal
+										.CalDistanceByAzimuth(mCameraHeight,
+												Math.abs(angle[1])), angle[1]).dLongitude));
+				targetLat
+						.setText(String.valueOf(PhotoCal
+								.CalPosbyCurrentGPSPoint(longi, lati, PhotoCal
+										.CalDistanceByAzimuth(mCameraHeight,
+												Math.abs(angle[1])), angle[1]).dLatitude));
 			}
 		}
 
@@ -220,14 +232,14 @@ public class MainActivity extends Activity {
 		if (location != null) {
 			longi = location.getLongitude();
 			lati = location.getLatitude();
-			alti = location.getAltitude();
-			double v = location.getSpeed();
-			double posi = location.getBearing();
+			/*
+			 * double alti = location.getAltitude(); double v =
+			 * location.getSpeed(); double posi = location.getBearing();
+			 */
 			longitudeValue.setText(String.valueOf(longi));
 			latitudeValue.setText(String.valueOf(lati));
-			altitudeValue.setText(String.valueOf(alti));
-			velocityValue.setText(String.valueOf(v));
-			bearingValue.setText(String.valueOf(posi));
+
+			// bearingValue.setText(String.valueOf(posi));
 		} else {
 			// 未获取地理位置信息
 			Toast.makeText(this, "地理位置信息未知或正在获取地理信息位置中...", Toast.LENGTH_LONG)
@@ -248,6 +260,7 @@ public class MainActivity extends Activity {
 			if (!file.exists())
 				file.mkdirs();
 		}
+		mFileHelper = new FileHelper(MainActivity.this);
 	}
 
 	// 初始化摄像头
@@ -351,12 +364,18 @@ public class MainActivity extends Activity {
 		zAcceleValue = (TextView) findViewById(R.id.zAxisValue);
 		longitudeValue = (TextView) findViewById(R.id.longitudeValue);
 		latitudeValue = (TextView) findViewById(R.id.latitudeValue);
-		altitudeValue = (TextView) findViewById(R.id.altitudeValue);
-		velocityValue = (TextView) findViewById(R.id.velocityValue);
-		bearingValue = (TextView) findViewById(R.id.bearingValue);
+		targetLng = (TextView) findViewById(R.id.altitudeValue);
+		targetLat = (TextView) findViewById(R.id.velocityValue);
+		// bearingValue = (TextView) findViewById(R.id.bearingValue);
 		headingAngle = (TextView) findViewById(R.id.headingValue);
 		pitchAngle = (TextView) findViewById(R.id.pitchValue);
 		rollAngle = (TextView) findViewById(R.id.rollValue);
+		mWalkSize = (Float) ConfigHelper.getSharePref(MainActivity.this,
+				PublicData.SHARED_PRE_FILE_NAME, PublicData.WALKSIZE, 5);
+		mCameraHeight = (Float) ConfigHelper.getSharePref(MainActivity.this,
+				PublicData.SHARED_PRE_FILE_NAME, PublicData.CAMERA_HEIGHT, 5);
+		CCD = (Float) ConfigHelper.getSharePref(MainActivity.this,
+				PublicData.SHARED_PRE_FILE_NAME, PublicData.CCD, 5);
 	}
 
 	OnClickListener click = new OnClickListener() {
@@ -383,6 +402,7 @@ public class MainActivity extends Activity {
 			case R.id.height://设置高度计算功能
 				a = 0;
 				mTime = Constants.getTime();
+				mBtnFinish.setVisibility(View.GONE);
 				type = 1;
 				mBtnPoint.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnHeight
@@ -399,7 +419,7 @@ public class MainActivity extends Activity {
 			case R.id.distance:
 				b = 0;
 				mTime = Constants.getTime();
-				// mBtnFinish.setVisibility(View.VISIBLE);
+				mBtnFinish.setVisibility(View.GONE);
 				type = 2;
 				mBtnPoint.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnHeight.setBackgroundResource(R.drawable.btn_background_up);
@@ -414,7 +434,7 @@ public class MainActivity extends Activity {
 				break;
 			case R.id.area:
 				mTime = Constants.getTime();
-				// mBtnFinish.setVisibility(View.VISIBLE);
+				mBtnFinish.setVisibility(View.VISIBLE);
 				type = 3;
 				mBtnPoint.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnHeight.setBackgroundResource(R.drawable.btn_background_up);
@@ -452,12 +472,7 @@ public class MainActivity extends Activity {
 		final EditText ccd = (EditText) mDialog.findViewById(R.id.edit_values);
 		final EditText etwalkstep = (EditText) mDialog
 				.findViewById(R.id.edit_steps);
-		mWalkSize = (Float) ConfigHelper.getSharePref(MainActivity.this,
-				PublicData.SHARED_PRE_FILE_NAME, PublicData.WALKSIZE, 5);
-		mCameraHeight = (Float) ConfigHelper.getSharePref(MainActivity.this,
-				PublicData.SHARED_PRE_FILE_NAME, PublicData.CAMERA_HEIGHT, 5);
-		CCD = (Float) ConfigHelper.getSharePref(MainActivity.this,
-				PublicData.SHARED_PRE_FILE_NAME, PublicData.CCD, 5);
+
 		if (mWalkSize != 0.0f) {
 			etwalkstep.setText(String.valueOf(mWalkSize));
 			camerheight.setText(String.valueOf(mCameraHeight));
@@ -494,35 +509,14 @@ public class MainActivity extends Activity {
 	}
 
 	private void isFinish() {
-		switch (type) {
-		case 1://高度量测
-			if (a > 1) {
-				a = 0;
-				gotoWork();
-			} else
-				Toast.makeText(getBaseContext(), "样本数量至少为两个！",
-						Toast.LENGTH_SHORT).show();
-			break;
-		case 2://距离量测
-			if (b > 1) {
-				b = 0;
-				gotoWork();
-			} else
-				Toast.makeText(getBaseContext(), "样本数量至少为两个！",
-						Toast.LENGTH_SHORT).show();
-			break;
-		case 3://面积量测
-			if (c > 1) {
-				// gotoWorkother();
-				Toast.makeText(MainActivity.this, "该功能正在开发中", Toast.LENGTH_LONG)
-						.show();
-			} else
-				Toast.makeText(getBaseContext(), "样本数量至少为3个！",
-						Toast.LENGTH_SHORT).show();
-			break;
-		default:
-			break;
+		if(c>2)
+		{
+			Toast.makeText(MainActivity.this,"10"+Math.random(),Toast.LENGTH_SHORT).show();
+			c=0;
+			mTime = Constants.getTime();
 		}
+		else
+			Toast.makeText(MainActivity.this,"当前顶点暂时不能构成多边形！",Toast.LENGTH_SHORT).show();
 	}
 
 	/**
@@ -595,6 +589,9 @@ public class MainActivity extends Activity {
 			switch (type) {
 			case 0://计算定点
 			{
+							mFileHelper.writeSDFile(longi + "&&" + lati, PATH
+						+ PicSaveActivity.TXTNAME + ".txt");
+
 				///使用相机的高度与方向位计算中心点的距离
 				double dL = PhotoCal.CalDistanceByAzimuth(mCameraHeight, angle[1]);
 				LongLatPoint pt = new LongLatPoint();
@@ -620,8 +617,10 @@ public class MainActivity extends Activity {
 				Constants.f1 = mFocus;
 				break;
 			case 3://面积公式还需要开发
-				Toast.makeText(MainActivity.this, "该功能正在开发中", Toast.LENGTH_LONG)
-						.show();
+				c++;
+				mFileHelper.writeSDFile(longitudeValue.getText().toString()
+						+ "&&" + latitudeValue.getText().toString(), PATH
+						+ PicSaveActivity.TXTNAME + ".txt");
 				break;
 			default:
 				break;
