@@ -40,29 +40,25 @@ public class PhotoCal {
 	
 	
 	/**
-	 * 这里是通过人的身高以及拍摄时的相机府仰角来计算
 	 * 通过相机的高度以及所拍对象的中心点的方向角，计算相机中心到所拍中心点的角度
 	 * @param dHeight 相机的成像高度，高度为米
 	 * @param dAzimuth 与所拍点的方位角，角度
 	 * @return
-	 * Modify on June 5
 	 */
-	public static double CalDistanceByAzimuth(double dHeight, double dPicth)
+	public static double CalDistanceByAzimuth(double dHeight, double dAzimuth)
 	{
-		double dDis = 0.0;		
+		double dDis = 0.0;
+		
 		//1. Calculate the distant between the target point and Origin point
-
-		//        /|D
-		//       / |
-		//      /  |
-		//     /   |H
-		//    /    |
-		//  B/     |
-		//  --------A-----
-		//dZzimuth + 90 = <ADB
-		//因为相机获取的Pitch值为水平时为0
-		//
-		dDis = dHeight/Math.cos(Math.abs(dPicth+90));
+		//       B   D
+		//		  \  |
+		//		   \ |
+		//			\|
+		//-------C---A
+		//dZzimuth =Angle(CAB)
+		//CB/AB=sina(CAB)
+		dDis = dHeight/Math.sin(Math.abs(dAzimuth));// dAzimuth);
+		//dDis = Math.tan(dAzimuth)* dHeight;
 		return dDis;
 	}
 	
@@ -99,42 +95,21 @@ public class PhotoCal {
 		return dHeight;
 	}
 	
-
-
-	/**
-	 * 
-	 * @param dHeight 人的身高
-	 * @param dALong 已经点的经度
-	 * @param dLati  已知点的纬度
-	 * @param dPicth 府仰角，水平方向为0，向下为正，向上为负
-	 * @param dAzimuth 水平方向角，正北方向为0
-	 * @return
-	 */
-	public static LongLatPoint CalSimpleLocation(double dHeight, double dALong, double dLati, double dPicth,double dAzimuth)
+	public static LongLatPoint CalSimpleLocation(double dHeight, double dALong, double dLati, double dAzimuth)
 	{
 		LongLatPoint pReturn = new LongLatPoint();
-		double dDis = CalDistanceByAzimuth(dHeight,dPicth);
+		
+		//1. Calculate the distant between the target point and Origin point
 		//       B   D
 		//		  \  |
 		//		   \ |
 		//			\|
 		//-------C---A
-		//<DAB,<BAC
-		double dCA = dDis*Math.sin(Math.abs(dAzimuth));
+		//dZzimuth =Angle(CAB)
+		//CB/AB=sina(CAB)
+		double bDis = dHeight/Math.sin(Math.abs(dAzimuth));// dAzimuth);
 		
-		double dAD = dDis*Math.cos(Math.abs(dAzimuth));
-		///Calculate the delta Longtitude and Latitude
-		double dDeltLong = dCA*0.0324*Math.cos(dLati);
-		double dDeltLat  = dAD*0.0324;
-		if(dAzimuth <180 )
-			pReturn.dLongitude = dALong +dDeltLong;
-		else
-			pReturn.dLongitude = dALong -dDeltLong;
 		
-		if(dAzimuth <90 || dAzimuth >270)
-			pReturn.dLatitude = dLati + dDeltLat;
-		else
-			pReturn.dLatitude = dLati - dDeltLat;
 		return pReturn;
 	}
 	

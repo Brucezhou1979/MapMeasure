@@ -113,28 +113,23 @@ public class PhotoCal {
 	public static LongLatPoint CalSimpleLocation(double dHeight, double dALong, double dLati, double dPicth,double dAzimuth)
 	{
 		LongLatPoint pReturn = new LongLatPoint();
-		double dDis = CalDistanceByAzimuth(dHeight,dPicth);
+		double dDis = CalDistanceByAzimuth(dHeight,dAzimuth);
 		//       B   D
 		//		  \  |
 		//		   \ |
 		//			\|
 		//-------C---A
 		//<DAB,<BAC
-		double dCA = dDis*Math.sin(Math.abs(dAzimuth));
+		double dCA = dDis*Math.sin(Math.abs(dPicth));
 		
-		double dAD = dDis*Math.cos(Math.abs(dAzimuth));
-		///Calculate the delta Longtitude and Latitude
+		double dAD = dDis*Math.cos(Math.abs(dPicth));
+		
 		double dDeltLong = dCA*0.0324*Math.cos(dLati);
 		double dDeltLat  = dAD*0.0324;
-		if(dAzimuth <180 )
-			pReturn.dLongitude = dALong +dDeltLong;
-		else
-			pReturn.dLongitude = dALong -dDeltLong;
 		
-		if(dAzimuth <90 || dAzimuth >270)
-			pReturn.dLatitude = dLati + dDeltLat;
-		else
-			pReturn.dLatitude = dLati - dDeltLat;
+		
+		
+		
 		return pReturn;
 	}
 	

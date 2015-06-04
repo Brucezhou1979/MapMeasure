@@ -123,7 +123,7 @@ public class PhotoCal {
 		double dCA = dDis*Math.sin(Math.abs(dAzimuth));
 		
 		double dAD = dDis*Math.cos(Math.abs(dAzimuth));
-		///Calculate the delta Longtitude and Latitude
+		
 		double dDeltLong = dCA*0.0324*Math.cos(dLati);
 		double dDeltLat  = dAD*0.0324;
 		if(dAzimuth <180 )
