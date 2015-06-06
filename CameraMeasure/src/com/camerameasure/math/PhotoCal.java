@@ -13,7 +13,7 @@ import com.camerameasure.math.PhotoCal;
 public class PhotoCal {
 	//地球的平均半径，单位为米
 	static double R = 6371393;
-	static double PI = 3.1415926;
+	public static double PI = 3.1415926;
 	
 	/**
 	 * 通过当前点的经纬度以及与相机观察点的距离和方位角计算新点的经纬度值
@@ -28,8 +28,8 @@ public class PhotoCal {
 		double dc = dLong / R;
 		dc = dc*180 / PI;
 		///求解a，得到纬度的角度
-		double a = Math.acos(Math.cos(90-dAj)*Math.cos(dc)+Math.sin(90-dAw)*Math.sin(dc)*Math.cos(dAzimuth));
-		double dC = Math.asin(Math.sin(dc)*Math.sin(dAzimuth)/Math.sin(a));		
+		double a = Math.acos(Math.cos((90-dAj)*PI/180)*Math.cos(dc*PI/180)+Math.sin((90-dAw)*PI/180)*Math.sin(dc*PI/180)*Math.cos(dAzimuth*PI/180)*PI/180);
+		double dC = Math.asin(Math.sin(dc*PI/180)*Math.sin(dAzimuth*PI/180)/Math.sin(a*PI/180)*PI/180);		
 		double dBw =90 - a;
 		double dBj = dAj + dC;
 		LongLatPoint pt = new LongLatPoint();
@@ -37,6 +37,8 @@ public class PhotoCal {
 		pt.dLatitude = dBw;
 		return pt;
 	}
+	
+	
 	
 	
 	/**
@@ -51,7 +53,6 @@ public class PhotoCal {
 	{
 		double dDis = 0.0;		
 		//1. Calculate the distant between the target point and Origin point
-
 		//        /|D
 		//       / |
 		//      /  |
@@ -61,10 +62,11 @@ public class PhotoCal {
 		//  --------A-----
 		//dZzimuth + 90 = <ADB
 		//因为相机获取的Pitch值为水平时为0
-		//
-		dDis = dHeight/Math.cos(Math.abs(dPicth+90));
+		dDis = dHeight/Math.tan(Math.abs(dPicth+90)*PI/180);
 		return dDis;
 	}
+	
+	
 	
 	
 	/**
@@ -82,6 +84,9 @@ public class PhotoCal {
 		dDis = dMoveStep*dL1*dL2 / (dfoucs1*dL2 - dfoucs2*dL1);
 		return dDis;
 	}
+	
+	
+	
 
 	/**
 	 * 两相片，影像简易距离计算公式
@@ -120,11 +125,11 @@ public class PhotoCal {
 		//			\|
 		//-------C---A
 		//<DAB,<BAC
-		double dCA = dDis*Math.sin(Math.abs(dAzimuth));		
-		double dAD = dDis*Math.cos(Math.abs(dAzimuth));
-		///Calculate the delta Longtitude and Latitude
-		double dDeltLong = dCA*0.0324*Math.cos(dLati);
+		double dCA = Math.abs(dDis*Math.sin(Math.abs(dAzimuth)*PI/180));
+		double dAD = Math.abs(dDis*Math.cos(Math.abs(dAzimuth)*PI/180));
+		double dDeltLong = Math.abs(dCA*0.0324*Math.cos(dLati*PI/180));
 		double dDeltLat  = dAD*0.0324;
+		
 		if(dAzimuth <180 )
 			pReturn.dLongitude = dALong +dDeltLong;
 		else
@@ -134,6 +139,7 @@ public class PhotoCal {
 			pReturn.dLatitude = dLati + dDeltLat;
 		else
 			pReturn.dLatitude = dLati - dDeltLat;
+		
 		return pReturn;
 	}
 	

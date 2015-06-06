@@ -3,4 +3,5 @@
 <fullyQualifiedTypeName name="com.camerameasure.math.PhotoCal"/>
 <fullyQualifiedTypeName name="com.camerameasure.math.LongLatPoint"/>
 <fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

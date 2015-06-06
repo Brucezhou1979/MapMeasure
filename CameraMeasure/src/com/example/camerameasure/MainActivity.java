@@ -2,6 +2,7 @@ package com.example.camerameasure;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -74,7 +75,7 @@ public class MainActivity extends Activity {
 	 * 陀螺仪的角度值
 	 */
 	private float[] angle = new float[3];
-	private int type = 0;
+	private int itypeCase = 0;
 
 	private TextView xAcceleValue;
 	private TextView yAcceleValue;
@@ -100,6 +101,8 @@ public class MainActivity extends Activity {
 	private double longi;
 	private double lati;
 	private double alti;
+	
+	private LongLatPoint tarPoint;
 	/**
 	 * 移动步长
 	 */
@@ -108,6 +111,13 @@ public class MainActivity extends Activity {
 	 * CCD像元值
 	 */
 	private float CCD;
+	
+	
+	/**
+	 * 记录多边形的每一个顶点的两个值
+	 */
+	private List<Double> listPitchPoints;
+	private List<Double> listAzimuthPoints;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -179,16 +189,20 @@ public class MainActivity extends Activity {
 				headingAngle.setText(String.valueOf(angle[0]));
 				pitchAngle.setText(String.valueOf(angle[1]));
 				rollAngle.setText(String.valueOf(angle[2]));
-				targetLng
-						.setText(String.valueOf(PhotoCal
-								.CalPosbyCurrentGPSPoint(longi, lati, PhotoCal
-										.CalDistanceByAzimuth(mCameraHeight,
-												Math.abs(angle[1])), angle[1]).dLongitude));
-				targetLat
-						.setText(String.valueOf(PhotoCal
-								.CalPosbyCurrentGPSPoint(longi, lati, PhotoCal
-										.CalDistanceByAzimuth(mCameraHeight,
-												Math.abs(angle[1])), angle[1]).dLatitude));
+				tarPoint = PhotoCal.CalSimpleLocation(mCameraHeight, longi, lati, angle[1], angle[0]);
+				targetLng.setText(String.valueOf(tarPoint.dLongitude));
+				targetLat.setText(String.valueOf(tarPoint.dLatitude));
+				
+//				targetLng
+//						.setText(String.valueOf(PhotoCal
+//								.CalPosbyCurrentGPSPoint(longi, lati, PhotoCal
+//										.CalDistanceByAzimuth(mCameraHeight,
+//												Math.abs(angle[1])), angle[1]).dLongitude));
+//				targetLat
+//						.setText(String.valueOf(PhotoCal
+//								.CalPosbyCurrentGPSPoint(longi, lati, PhotoCal
+//										.CalDistanceByAzimuth(mCameraHeight,
+//												Math.abs(angle[1])), angle[1]).dLatitude));
 			}
 		}
 
@@ -238,9 +252,11 @@ public class MainActivity extends Activity {
 			 */
 			longitudeValue.setText(String.valueOf(longi));
 			latitudeValue.setText(String.valueOf(lati));
-
-			// bearingValue.setText(String.valueOf(posi));
 		} else {
+			////设置默认值
+			tarPoint = new LongLatPoint();
+			tarPoint.dLongitude = 114.350000343;
+			tarPoint.dLatitude = 30.5360370438;
 			// 未获取地理位置信息
 			Toast.makeText(this, "地理位置信息未知或正在获取地理信息位置中...", Toast.LENGTH_LONG)
 					.show();
@@ -382,12 +398,11 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onClick(View v) {
-			// TODO Auto-generated method stub
 			switch (v.getId()) {
 			case R.id.fixed_point:///设置定位功能
 				mTime = Constants.getTime();
 				mBtnFinish.setVisibility(View.GONE);
-				type = 0;
+				itypeCase = 0;
 				mBtnPoint.setBackgroundResource(R.drawable.btn_background_down);
 				mBtnHeight.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnDistance
@@ -402,8 +417,8 @@ public class MainActivity extends Activity {
 			case R.id.height://设置高度计算功能
 				a = 0;
 				mTime = Constants.getTime();
-				mBtnFinish.setVisibility(View.GONE);
-				type = 1;
+				mBtnFinish.setVisibility(View.VISIBLE);
+				itypeCase = 1;
 				mBtnPoint.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnHeight
 						.setBackgroundResource(R.drawable.btn_background_down);
@@ -419,8 +434,8 @@ public class MainActivity extends Activity {
 			case R.id.distance:
 				b = 0;
 				mTime = Constants.getTime();
-				mBtnFinish.setVisibility(View.GONE);
-				type = 2;
+				mBtnFinish.setVisibility(View.VISIBLE);
+				itypeCase = 2;
 				mBtnPoint.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnHeight.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnDistance
@@ -435,7 +450,7 @@ public class MainActivity extends Activity {
 			case R.id.area:
 				mTime = Constants.getTime();
 				mBtnFinish.setVisibility(View.VISIBLE);
-				type = 3;
+				itypeCase = 3;
 				mBtnPoint.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnHeight.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnDistance
@@ -481,7 +496,6 @@ public class MainActivity extends Activity {
 		btnsure.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				Constants.M = Double.parseDouble(etwalkstep.getText()
 						.toString());
 				ConfigHelper.setSharePref(MainActivity.this,
@@ -498,25 +512,55 @@ public class MainActivity extends Activity {
 			}
 		});
 		btncancel.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				mDialog.dismiss();
 			}
 		});
 		mDialog.show();
 	}
 
+	/**
+	 * 点击结束后
+	 */
 	private void isFinish() {
 		if(c>2)
 		{
-			Toast.makeText(MainActivity.this,"10"+Math.random(),Toast.LENGTH_SHORT).show();
-			c=0;
-			mTime = Constants.getTime();
+			CalArea();
 		}
 		else
 			Toast.makeText(MainActivity.this,"当前顶点暂时不能构成多边形！",Toast.LENGTH_SHORT).show();
+	}
+	
+	/**
+	 * 面积计算
+	 */
+	private void CalArea()
+	{
+		List<Double> mPoints = new ArrayList<Double>();
+		List<Double> lAng = new ArrayList<Double>();
+		for(int i=0; i< listPitchPoints.size();i++)
+		{
+			double pDis =0.0;//= new double();
+			pDis = PhotoCal.CalDistanceByAzimuth(mCameraHeight, listPitchPoints.get(i)); //PhotoCal.CalSimpleLocation(mCameraHeight, longi, lati, listPitchPoints.get(i), listAzimuthPoints.get(i));
+			mPoints.add(pDis);
+			if(i>0)
+			{
+				double pA = listAzimuthPoints.get(i)-listAzimuthPoints.get(i-1);
+				lAng.add(pA);
+			}
+		}
+		
+		double dArea =0.0;
+		for(int i=1; i< mPoints.size();i++ )
+		{
+			dArea += 0.5* mPoints.get(i)* mPoints.get(i-1)*Math.sin(lAng.get(i-1)* PhotoCal.PI/180);
+		}
+		
+		Toast.makeText(MainActivity.this,String.valueOf(Math.abs(dArea)),Toast.LENGTH_SHORT).show();
+		listPitchPoints.clear();
+		listAzimuthPoints.clear();
+		
 	}
 
 	/**
@@ -530,12 +574,45 @@ public class MainActivity extends Activity {
 		}
 		Intent intent = new Intent();
 		intent.setClass(getBaseContext(), WorkActivity.class);
-		intent.putExtra(Constants.TYPe, type);
+		intent.putExtra(Constants.TYPe, itypeCase);
 		intent.putExtra(Constants.PATH, PATH);
 		startActivity(intent);
 	}
 
 	private void takePicture() {
+		if(itypeCase ==3 )
+		{
+			if(listPitchPoints == null)
+				listPitchPoints = new ArrayList<Double>();
+			
+			listPitchPoints.add((double) angle[1]);
+			
+			if(listAzimuthPoints == null)
+				listAzimuthPoints =new ArrayList<Double>();
+			
+			listAzimuthPoints.add((double)angle[0]);
+			c++;
+		}
+		else if(itypeCase ==1)
+		{
+			a++;
+			if (a > 1) {
+				Constants.f2 = mFocus;
+				a = 0;
+				gotoWork();
+			}
+			Constants.f1 = mFocus;
+		}
+		else if(itypeCase ==2)
+		{
+			b++;
+			if (b > 1) {
+				Constants.f2 = mFocus;
+				b = 0;
+				gotoWork();
+			}
+			Constants.f1 = mFocus;
+		}
 		camera.takePicture(null, null, mPictureCallback);
 	}
 
@@ -543,7 +620,6 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onPictureTaken(byte[] data, Camera camera) {
-			// TODO Auto-generated method stub
 			// 执行照片保存方法
 			new SavePictureTask().execute(data);
 			// 开启预览
@@ -555,7 +631,7 @@ public class MainActivity extends Activity {
 	class SavePictureTask extends AsyncTask<byte[], String, String> {
 		@Override
 		protected String doInBackground(byte[]... params) {
-			switch (type) {
+			switch (itypeCase) {
 			case 0:
 				PATH = mPotPath + mTime + File.separator;
 				break;
@@ -582,20 +658,23 @@ public class MainActivity extends Activity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		switch (resultCode) { // resultCode为回传的标记，我在B中回传的是RESULT_OK
+		switch (resultCode) { 
+		// resultCode为回传的标记，我在B中回传的是RESULT_OK
 		case RESULT_OK:
 			Toast.makeText(getBaseContext(), "保存成功！", Toast.LENGTH_SHORT)
 					.show();
-			switch (type) {
+			switch (itypeCase) {
 			case 0://计算定点
 			{
-							mFileHelper.writeSDFile(longi + "&&" + lati, PATH
+				mFileHelper.writeSDFile(longi + "&&" + lati, PATH
 						+ PicSaveActivity.TXTNAME + ".txt");
 
+				//计算当前的定位			
+				tarPoint = PhotoCal.CalSimpleLocation(mCameraHeight, longi, lati, angle[1], angle[0]);
 				///使用相机的高度与方向位计算中心点的距离
-				double dL = PhotoCal.CalDistanceByAzimuth(mCameraHeight, angle[1]);
-				LongLatPoint pt = new LongLatPoint();
-				pt= PhotoCal.CalPosbyCurrentGPSPoint(longi, lati, dL, angle[1]);
+//				double dL = PhotoCal.CalDistanceByAzimuth(mCameraHeight, angle[1]);
+//				LongLatPoint pt = new LongLatPoint();
+//				pt= PhotoCal.CalPosbyCurrentGPSPoint(longi, lati, dL, angle[1]);
 				break;
 			}
 			case 1://如果大于1张时，计算距离
@@ -621,6 +700,7 @@ public class MainActivity extends Activity {
 				mFileHelper.writeSDFile(longitudeValue.getText().toString()
 						+ "&&" + latitudeValue.getText().toString(), PATH
 						+ PicSaveActivity.TXTNAME + ".txt");
+
 				break;
 			default:
 				break;
@@ -640,7 +720,6 @@ public class MainActivity extends Activity {
 				new android.content.DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						// TODO Auto-generated method stub
 						dialog.dismiss();
 						android.os.Process.killProcess(android.os.Process
 								.myPid());
@@ -650,7 +729,6 @@ public class MainActivity extends Activity {
 				new android.content.DialogInterface.OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
-						// TODO Auto-generated method stub
 						dialog.dismiss();
 					}
 				});
@@ -699,7 +777,6 @@ public class MainActivity extends Activity {
 
 	@Override
 	public boolean onKeyDown(int keyCode, KeyEvent event) {
-		// TODO Auto-generated method stub
 		if (keyCode == KeyEvent.KEYCODE_BACK)
 			Back();
 		return super.onKeyDown(keyCode, event);

@@ -2,6 +2,8 @@ package com.example.camerameasure;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.AlertDialog.Builder;
@@ -22,15 +24,21 @@ public class WorkActivity extends Activity {
 	private PicView mPicView;
 	private Button mPre, mNext, mPre_Line, mNext_Line;
 	private String mFile;
+	
 	/*
 	 * 计算所用的相片文件列表
 	 */
 	private ArrayList<String> mImageList;
 	
+	
+
+	
+	
 	/*
 	 * 线的位置，记录高度值
 	 */
 	private int position = 0;
+	
 	/**
 	 * 类型，1计算高度，2计算距离
 	 */
@@ -150,6 +158,5 @@ public class WorkActivity extends Activity {
 					}
 				});
 		builder.create().show();
-
 	}
 }
