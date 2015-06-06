@@ -146,11 +146,13 @@ public class PhotoCal {
 	 */
 	public static double CalAreaby3Points(LongLatPoint pA, LongLatPoint pB, LongLatPoint pC)
 	{
-		double dArea =0.0;		
+		double dArea =0.0;
+		
 		double s1=Math.sqrt((pA.dLongitude-pB.dLongitude)*(pA.dLongitude-pB.dLongitude)+(pA.dLatitude-pB.dLatitude)*(pA.dLatitude-pB.dLatitude));
 		double s2=Math.sqrt((pA.dLongitude-pC.dLongitude)*(pA.dLongitude-pC.dLongitude)+(pA.dLatitude-pC.dLatitude)*(pA.dLatitude-pC.dLatitude));
 		double s3=Math.sqrt((pB.dLongitude-pC.dLongitude)*(pB.dLongitude-pC.dLongitude)+(pB.dLatitude-pC.dLatitude)*(pB.dLatitude-pC.dLatitude));
-		dArea = CalAreaByHelen(s1,s2,s3);
+		double p=(s1+s2+s3)/2;
+		double a=Math.sqrt(p*(p-s1)*(p-s2)*(p-s3));
 		return dArea;
 	}
 	
@@ -168,5 +170,7 @@ public class PhotoCal {
 		dArea = Math.sqrt(p*(p-a)*(p-b)*(p-c));
 		return dArea;
 	}
+	
+	
 	
 }

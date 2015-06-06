@@ -256,3 +256,1303 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.ui 4 4 2015-06-04 23:47:17.149
 !MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1de9a22)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@19929ac)}
+!SESSION 2015-06-05 09:10:10.248 -----------------------------------------------
+eclipse.buildId=v22.3.0-887826
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2015-06-05 09:10:14.154
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 4 0 2015-06-05 09:10:33.839
+!MESSAGE Unable to resolve plug-in "platform:/plugin/org.eclipse.mylyn.tasks.ui/icons/eview16/task-list.gif".
+!STACK 0
+java.io.IOException: Unable to resolve plug-in "platform:/plugin/org.eclipse.mylyn.tasks.ui/icons/eview16/task-list.gif".
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.parse(PlatformURLPluginConnection.java:64)
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.resolve(PlatformURLPluginConnection.java:75)
+	at org.eclipse.core.internal.boot.PlatformURLHandler.openConnection(PlatformURLHandler.java:67)
+	at org.eclipse.osgi.framework.internal.protocol.URLStreamHandlerProxy.openConnection(URLStreamHandlerProxy.java:112)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:33)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:227)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:205)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:178)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:767)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:134)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:98)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:77)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:644)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:987)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+!ENTRY org.eclipse.jface 4 0 2015-06-05 09:10:33.912
+!MESSAGE Unable to resolve plug-in "platform:/plugin/org.eclipse.wst.server.ui/icons/cview16/servers_view.gif".
+!STACK 0
+java.io.IOException: Unable to resolve plug-in "platform:/plugin/org.eclipse.wst.server.ui/icons/cview16/servers_view.gif".
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.parse(PlatformURLPluginConnection.java:64)
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.resolve(PlatformURLPluginConnection.java:75)
+	at org.eclipse.core.internal.boot.PlatformURLHandler.openConnection(PlatformURLHandler.java:67)
+	at org.eclipse.osgi.framework.internal.protocol.URLStreamHandlerProxy.openConnection(URLStreamHandlerProxy.java:112)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:33)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:227)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:205)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:178)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:767)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:134)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:98)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:77)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:644)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:987)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+!ENTRY org.eclipse.jface 4 0 2015-06-05 09:10:33.915
+!MESSAGE Unable to resolve plug-in "platform:/plugin/org.eclipse.datatools.connectivity.ui.dse/icons/full/cview16/enterprise_explorer.gif".
+!STACK 0
+java.io.IOException: Unable to resolve plug-in "platform:/plugin/org.eclipse.datatools.connectivity.ui.dse/icons/full/cview16/enterprise_explorer.gif".
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.parse(PlatformURLPluginConnection.java:64)
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.resolve(PlatformURLPluginConnection.java:75)
+	at org.eclipse.core.internal.boot.PlatformURLHandler.openConnection(PlatformURLHandler.java:67)
+	at org.eclipse.osgi.framework.internal.protocol.URLStreamHandlerProxy.openConnection(URLStreamHandlerProxy.java:112)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:33)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:227)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:205)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:178)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:767)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:134)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:98)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:77)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:644)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:987)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-05 09:10:35.935
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-05 09:10:35.937
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.017
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@b695e8)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@ebb316)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.020
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@19213d2)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@19f59f1)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.023
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@8d2cec)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@177be8e)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.025
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@1167ccb)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@1753b69)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.030
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@11b44ca)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1e243bb)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.031
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@d0196d)} vs {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@1cf329d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.049
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@7375b3)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1430ea8)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.051
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@11afdd5)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@badb65)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.053
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@18d4aa9)} vs {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@e97d4d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.055
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@93f8d7)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@e5fbe5)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.057
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@3cf5d7)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@1b14ae3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.062
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@c47480)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@1e2bdc7)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.064
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@1340615)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@6b300a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.066
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1e243bb)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1db6ea8)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.069
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@d0196d)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@53b822)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.071
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@589eed)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@7ea46)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.073
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@13e4068)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@1499643)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.075
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1b45ea1)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@15a72cd)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.077
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@1f32c09)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@a31454)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.079
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@14ae05)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1430ea8)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 10:45:33.082
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@badb65)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ee0e3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:14:23.603
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1b45ea1)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@15a72cd)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:14:23.605
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@1f32c09)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@a31454)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:14:39.781
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@8d2cec)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@177be8e)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:14:39.783
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@19213d2)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@19f59f1)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:14:39.784
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@1167ccb)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@1753b69)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:14:39.788
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@b695e8)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@ebb316)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:14:39.792
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1e243bb)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1db6ea8)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:14:39.794
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@d0196d)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@53b822)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.562
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@b695e8)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@ebb316)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.564
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@19213d2)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@19f59f1)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.566
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@177be8e)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@8d2cec)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.569
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@1753b69)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@1167ccb)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.573
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1e243bb)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@11b44ca)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.575
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@1cf329d)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@d0196d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.593
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@7375b3)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1430ea8)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.595
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@badb65)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@11afdd5)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.597
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@18d4aa9)} vs {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@e97d4d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.599
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@93f8d7)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@e5fbe5)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.601
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@1b14ae3)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@3cf5d7)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.603
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@c47480)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@1e2bdc7)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.605
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@6b300a)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@1340615)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.607
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1db6ea8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1e243bb)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.609
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@d0196d)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@53b822)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.611
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@7ea46)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@589eed)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.613
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@13e4068)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@1499643)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.615
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1b45ea1)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@15a72cd)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.617
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@1f32c09)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@a31454)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.620
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1430ea8)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@14ae05)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.622
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@badb65)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ee0e3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.672
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@b695e8)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@ebb316)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.674
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@19213d2)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@19f59f1)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.676
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@177be8e)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@8d2cec)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.678
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@1167ccb)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@1753b69)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.682
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1e243bb)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@11b44ca)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.684
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@d0196d)} vs {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@1cf329d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.691
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@7375b3)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1430ea8)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.693
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@11afdd5)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@badb65)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.694
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@18d4aa9)} vs {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@e97d4d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.696
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@93f8d7)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@e5fbe5)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.698
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@1b14ae3)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@3cf5d7)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.700
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@3cf5d7)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@1b14ae3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.702
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@1e2bdc7)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@c47480)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.704
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@1340615)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@6b300a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.706
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1e243bb)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@1db6ea8)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.708
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@d0196d)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@53b822)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.710
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@7ea46)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@589eed)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.712
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@13e4068)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@1499643)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.714
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1b45ea1)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@15a72cd)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.716
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@a31454)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@1f32c09)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.718
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1430ea8)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@14ae05)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.720
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@badb65)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ee0e3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.867
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1430ea8)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@14ae05)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.870
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1430ea8)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@14ae05)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.872
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@badb65)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ee0e3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-05 11:18:08.874
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@badb65)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ee0e3)}
+!SESSION 2015-06-06 07:31:52.793 -----------------------------------------------
+eclipse.buildId=v22.3.0-887826
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=zh_CN
+Framework arguments:  -product com.android.ide.eclipse.adt.package.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product com.android.ide.eclipse.adt.package.product
+
+!ENTRY org.eclipse.jface 4 0 2015-06-06 07:32:28.126
+!MESSAGE Unable to resolve plug-in "platform:/plugin/org.eclipse.mylyn.tasks.ui/icons/eview16/task-list.gif".
+!STACK 0
+java.io.IOException: Unable to resolve plug-in "platform:/plugin/org.eclipse.mylyn.tasks.ui/icons/eview16/task-list.gif".
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.parse(PlatformURLPluginConnection.java:64)
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.resolve(PlatformURLPluginConnection.java:75)
+	at org.eclipse.core.internal.boot.PlatformURLHandler.openConnection(PlatformURLHandler.java:67)
+	at org.eclipse.osgi.framework.internal.protocol.URLStreamHandlerProxy.openConnection(URLStreamHandlerProxy.java:112)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:33)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:227)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:205)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:178)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:767)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:134)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:98)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:77)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:644)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:987)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+!ENTRY org.eclipse.jface 4 0 2015-06-06 07:32:28.190
+!MESSAGE Unable to resolve plug-in "platform:/plugin/org.eclipse.wst.server.ui/icons/cview16/servers_view.gif".
+!STACK 0
+java.io.IOException: Unable to resolve plug-in "platform:/plugin/org.eclipse.wst.server.ui/icons/cview16/servers_view.gif".
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.parse(PlatformURLPluginConnection.java:64)
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.resolve(PlatformURLPluginConnection.java:75)
+	at org.eclipse.core.internal.boot.PlatformURLHandler.openConnection(PlatformURLHandler.java:67)
+	at org.eclipse.osgi.framework.internal.protocol.URLStreamHandlerProxy.openConnection(URLStreamHandlerProxy.java:112)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:33)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:227)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:205)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:178)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:767)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:134)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:98)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:77)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:644)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:987)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+!ENTRY org.eclipse.jface 4 0 2015-06-06 07:32:28.192
+!MESSAGE Unable to resolve plug-in "platform:/plugin/org.eclipse.datatools.connectivity.ui.dse/icons/full/cview16/enterprise_explorer.gif".
+!STACK 0
+java.io.IOException: Unable to resolve plug-in "platform:/plugin/org.eclipse.datatools.connectivity.ui.dse/icons/full/cview16/enterprise_explorer.gif".
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.parse(PlatformURLPluginConnection.java:64)
+	at org.eclipse.core.internal.runtime.PlatformURLPluginConnection.resolve(PlatformURLPluginConnection.java:75)
+	at org.eclipse.core.internal.boot.PlatformURLHandler.openConnection(PlatformURLHandler.java:67)
+	at org.eclipse.osgi.framework.internal.protocol.URLStreamHandlerProxy.openConnection(URLStreamHandlerProxy.java:112)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:33)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:227)
+	at org.eclipse.jface.resource.ImageDescriptor.createImage(ImageDescriptor.java:205)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.getImage(SWTPartRenderer.java:178)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.createTab(StackRenderer.java:767)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.processContents(LazyStackRenderer.java:134)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:103)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:98)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:77)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:645)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:59)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:644)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:641)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:731)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$2(PartRenderingEngine.java:702)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$7.run(PartRenderingEngine.java:696)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:681)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:987)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:942)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-06 07:32:29.980
+!MESSAGE Warning: EGit couldn't detect the installation path "gitPrefix" of native Git. Hence EGit can't respect system level
+Git settings which might be configured in ${gitPrefix}/etc/gitconfig under the native Git installation directory.
+The most important of these settings is core.autocrlf. Git for Windows by default sets this parameter to true in
+this system level configuration. The Git installation location can be configured on the
+Team > Git > Configuration preference page's 'System Settings' tab.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.egit.ui 2 0 2015-06-06 07:32:29.981
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Administrator'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.589
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@a859c5)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@1083af6)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.591
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@165e744)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@de3b46)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.593
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@1b0af9f)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@1fb1da3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.595
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@1f1184e)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@1ebaf0d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.599
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@b5764d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.600
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@12acb12)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.613
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@cf5a6f)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.615
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ad016)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.617
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@14b6999)} vs {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@4d2232)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.636
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@61b732)} vs {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@111f814)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.638
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@e74eef)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@153dcc0)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.641
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@1c9f1ac)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@70c4ff)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.643
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@a6bd01)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@cd7d1c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.645
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@4c4fda)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.646
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@e5ddc0)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.648
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@a9b662)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@1881b7a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.650
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@1de704a)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@12f3fcd)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.652
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@d918a)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1f23335)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.653
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@1ee779c)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@6a9a77)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.655
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1365142)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:36:39.657
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@30cc1)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:11.769
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@165e744)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@de3b46)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.856
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@a859c5)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@1083af6)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.858
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@165e744)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@de3b46)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.860
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@1b0af9f)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@1fb1da3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.862
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@1f1184e)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@1ebaf0d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.866
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@b5764d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.867
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@12acb12)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.875
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@cf5a6f)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.877
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ad016)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.879
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@4d2232)} vs {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@14b6999)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.880
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@61b732)} vs {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@111f814)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.882
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@e74eef)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@153dcc0)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.884
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@1c9f1ac)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@70c4ff)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.885
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@a6bd01)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@cd7d1c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.887
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@4c4fda)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.889
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@e5ddc0)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.891
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@a9b662)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@1881b7a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.893
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@12f3fcd)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@1de704a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.895
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@d918a)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1f23335)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.897
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@6a9a77)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@1ee779c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.899
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1365142)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:21.901
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@30cc1)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.016
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@a859c5)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@1083af6)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.018
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@de3b46)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@165e744)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.020
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@1b0af9f)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@1fb1da3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.022
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@1ebaf0d)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@1f1184e)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.025
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@b5764d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.027
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@12acb12)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.034
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@cf5a6f)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.036
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ad016)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.038
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@14b6999)} vs {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@4d2232)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.040
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@111f814)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@61b732)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.042
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@e74eef)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@153dcc0)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.044
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@e74eef)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@153dcc0)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.045
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@1c9f1ac)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@70c4ff)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.047
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@a6bd01)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@cd7d1c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.049
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@4c4fda)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.050
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@e5ddc0)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.052
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@a9b662)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@1881b7a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.054
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@12f3fcd)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@1de704a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.056
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@d918a)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1f23335)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.058
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@6a9a77)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@1ee779c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.060
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1365142)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:38:22.062
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@30cc1)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:39:09.724
+!MESSAGE Referenced part does not exist yet: org.eclipse.ui.views.ProblemView.
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.286
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@1083af6)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@a859c5)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.288
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@165e744)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@de3b46)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.290
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@1b0af9f)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@1fb1da3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.292
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@1f1184e)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@1ebaf0d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.295
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@b5764d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.297
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@12acb12)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.305
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@cf5a6f)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.307
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ad016)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.308
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@4d2232)} vs {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@14b6999)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.310
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@61b732)} vs {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@111f814)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.312
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@e74eef)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@153dcc0)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.314
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@153dcc0)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@e74eef)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.317
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@70c4ff)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@1c9f1ac)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.319
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@a6bd01)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@cd7d1c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.321
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@4c4fda)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.322
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@e5ddc0)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.324
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@a9b662)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@1881b7a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.326
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@1de704a)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@12f3fcd)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.328
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@d918a)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1f23335)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.330
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@6a9a77)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@1ee779c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.332
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1365142)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:41:13.334
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@30cc1)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.767
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@1083af6)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@a859c5)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.769
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@165e744)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@de3b46)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.772
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@1b0af9f)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@1fb1da3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.774
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@1f1184e)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@1ebaf0d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.778
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@b5764d)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.780
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@12acb12)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.788
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@cf5a6f)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.790
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ad016)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.792
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@4d2232)} vs {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@14b6999)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.793
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@61b732)} vs {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@111f814)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.795
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@153dcc0)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@e74eef)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.797
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@70c4ff)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@1c9f1ac)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.798
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@a6bd01)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@cd7d1c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.801
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@4c4fda)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.802
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@e5ddc0)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.804
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@a9b662)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@1881b7a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.806
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@12f3fcd)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@1de704a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.808
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1f23335)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@d918a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.810
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@6a9a77)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@1ee779c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.812
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1365142)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.814
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@30cc1)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.858
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@a859c5)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@1083af6)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.859
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@165e744)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@de3b46)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.861
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@1b0af9f)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@1fb1da3)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.863
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@1f1184e)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@1ebaf0d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.866
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@b5764d)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.868
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)} vs {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@12acb12)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.875
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@cf5a6f)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.877
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ad016)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.878
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@14b6999)} vs {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@4d2232)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.880
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@61b732)} vs {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@111f814)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.882
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@153dcc0)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@e74eef)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.883
+!MESSAGE Conflicting handlers for org.eclipse.jdt.ui.edit.text.java.open.editor: {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@153dcc0)} vs {ActionHandler(org.eclipse.jdt.ui.actions.OpenAction@e74eef)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.885
+!MESSAGE Conflicting handlers for org.eclipse.ui.navigate.goToResource: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@70c4ff)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.GotoResourceAction@1c9f1ac)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.886
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.properties: {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@cd7d1c)} vs {ActionHandler(org.eclipse.ui.dialogs.PropertyDialogAction@a6bd01)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.888
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@4c4fda)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.890
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@e5ddc0)} vs {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.892
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@a9b662)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@1881b7a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.893
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@1de704a)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@12f3fcd)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.895
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@d918a)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1f23335)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.897
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@6a9a77)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@1ee779c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.899
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1365142)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:20.901
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@30cc1)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:21.029
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1365142)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:21.031
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1365142)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:21.033
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@30cc1)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 07:57:21.035
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@30cc1)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.543
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@a859c5)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@1083af6)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.545
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.copy: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CopyToClipboardAction@165e744)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CopyActionHandler@de3b46)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.547
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.cut: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$CutActionHandler@1fb1da3)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.CutAction@1b0af9f)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.549
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.paste: {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.PasteAction@1ebaf0d)} vs {ActionHandler(org.eclipse.ui.actions.TextActionHandler$PasteActionHandler@1f1184e)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.554
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addBookmark: {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@b5764d)} vs {ActionHandler(org.eclipse.ui.actions.AddBookmarkAction@7c1e8)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.556
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.addTask: {ActionHandler(org.eclipse.ui.actions.AddTaskAction@15d04d2)} vs {ActionHandler(org.eclipse.jdt.internal.ui.actions.AddTaskAction@12acb12)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.564
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@cf5a6f)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.566
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@9ad016)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.568
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@4d2232)} vs {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@14b6999)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.570
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.move: {ActionHandler(org.eclipse.jdt.ui.actions.MoveAction@111f814)} vs {ActionHandler(org.eclipse.ui.actions.MoveResourceAction@61b732)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.572
+!MESSAGE Conflicting handlers for org.eclipse.ui.file.refresh: {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@a9b662)} vs {ActionHandler(org.eclipse.ui.internal.navigator.resources.actions.ResourceMgmtActionProvider$2@1881b7a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.574
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.buildProject: {ActionHandler(org.eclipse.ui.actions.BuildAction@1de704a)} vs {ActionHandler(org.eclipse.ui.actions.BuildAction@12f3fcd)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.576
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.openProject: {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@1f23335)} vs {ActionHandler(org.eclipse.ui.actions.OpenResourceAction@d918a)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.578
+!MESSAGE Conflicting handlers for org.eclipse.ui.project.closeProject: {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@6a9a77)} vs {ActionHandler(org.eclipse.ui.actions.CloseResourceAction@1ee779c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.580
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.undo: {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@3b9d4b)} vs {ActionHandler(org.eclipse.ui.operations.UndoActionHandler@1365142)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.581
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.redo: {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@30cc1)} vs {ActionHandler(org.eclipse.ui.operations.RedoActionHandler@1a9374c)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.590
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.delete: {ActionHandler(org.eclipse.ui.actions.TextActionHandler$DeleteActionHandler@a859c5)} vs {ActionHandler(org.eclipse.jdt.internal.ui.refactoring.reorg.DeleteAction@1083af6)}
+
+!ENTRY org.eclipse.ui 4 4 2015-06-06 08:10:04.592
+!MESSAGE Conflicting handlers for org.eclipse.ui.edit.rename: {ActionHandler(org.eclipse.ui.actions.RenameResourceAction@4d2232)} vs {ActionHandler(org.eclipse.jdt.ui.actions.RenameAction@14b6999)}

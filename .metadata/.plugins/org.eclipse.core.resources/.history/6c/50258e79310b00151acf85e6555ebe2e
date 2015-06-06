@@ -120,7 +120,8 @@ public class PhotoCal {
 		//			\|
 		//-------C---A
 		//<DAB,<BAC
-		double dCA = dDis*Math.sin(Math.abs(dAzimuth));		
+		double dCA = dDis*Math.sin(Math.abs(dAzimuth));
+		
 		double dAD = dDis*Math.cos(Math.abs(dAzimuth));
 		///Calculate the delta Longtitude and Latitude
 		double dDeltLong = dCA*0.0324*Math.cos(dLati);
@@ -137,36 +138,5 @@ public class PhotoCal {
 		return pReturn;
 	}
 	
-	/**
-	 * 通过三个坐标点计算三角形的面积
-	 * @param pA
-	 * @param pB
-	 * @param pC
-	 * @return
-	 */
-	public static double CalAreaby3Points(LongLatPoint pA, LongLatPoint pB, LongLatPoint pC)
-	{
-		double dArea =0.0;		
-		double s1=Math.sqrt((pA.dLongitude-pB.dLongitude)*(pA.dLongitude-pB.dLongitude)+(pA.dLatitude-pB.dLatitude)*(pA.dLatitude-pB.dLatitude));
-		double s2=Math.sqrt((pA.dLongitude-pC.dLongitude)*(pA.dLongitude-pC.dLongitude)+(pA.dLatitude-pC.dLatitude)*(pA.dLatitude-pC.dLatitude));
-		double s3=Math.sqrt((pB.dLongitude-pC.dLongitude)*(pB.dLongitude-pC.dLongitude)+(pB.dLatitude-pC.dLatitude)*(pB.dLatitude-pC.dLatitude));
-		dArea = CalAreaByHelen(s1,s2,s3);
-		return dArea;
-	}
-	
-	/**
-	 * 通过三角形的三条边计算面积的海伦公式
-	 * @param a
-	 * @param b
-	 * @param c
-	 * @return
-	 */
-	public static double CalAreaByHelen(double a, double b, double c)
-	{
-		double dArea =0.0;
-		double p =(a+b+c)/2;
-		dArea = Math.sqrt(p*(p-a)*(p-b)*(p-c));
-		return dArea;
-	}
 	
 }
