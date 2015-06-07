@@ -524,12 +524,35 @@ public class MainActivity extends Activity {
 	 * 点击结束后
 	 */
 	private void isFinish() {
-		if(c>2)
+		switch(itypeCase)
 		{
-			CalArea();
-		}
-		else
-			Toast.makeText(MainActivity.this,"当前顶点暂时不能构成多边形！",Toast.LENGTH_SHORT).show();
+			case 0:
+			{
+				break;
+			}
+			case 1:
+			{
+				break;
+			}
+			case 2:
+			{
+				break;
+			}
+			case 3:
+			{
+				if(c>2)
+				{
+					CalArea();
+				}
+				else
+					Toast.makeText(MainActivity.this,"当前顶点暂时不能构成多边形！",Toast.LENGTH_SHORT).show();
+				break;
+			}
+			default:
+			{
+				break;
+			}		
+		}		
 	}
 	
 	/**
@@ -580,6 +603,8 @@ public class MainActivity extends Activity {
 	}
 
 	private void takePicture() {
+		
+		camera.takePicture(null, null, mPictureCallback);
 		if(itypeCase ==3 )
 		{
 			if(listPitchPoints == null)
@@ -613,7 +638,6 @@ public class MainActivity extends Activity {
 			}
 			Constants.f1 = mFocus;
 		}
-		camera.takePicture(null, null, mPictureCallback);
 	}
 
 	Camera.PictureCallback mPictureCallback = new PictureCallback() {
