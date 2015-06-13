@@ -417,7 +417,7 @@ public class MainActivity extends Activity {
 			case R.id.height://设置高度计算功能
 				a = 0;
 				mTime = Constants.getTime();
-				mBtnFinish.setVisibility(View.VISIBLE);
+				mBtnFinish.setVisibility(View.GONE);
 				itypeCase = 1;
 				mBtnPoint.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnHeight
@@ -434,7 +434,7 @@ public class MainActivity extends Activity {
 			case R.id.distance:
 				b = 0;
 				mTime = Constants.getTime();
-				mBtnFinish.setVisibility(View.VISIBLE);
+				mBtnFinish.setVisibility(View.GONE);
 				itypeCase = 2;
 				mBtnPoint.setBackgroundResource(R.drawable.btn_background_up);
 				mBtnHeight.setBackgroundResource(R.drawable.btn_background_up);
@@ -524,35 +524,14 @@ public class MainActivity extends Activity {
 	 * 点击结束后
 	 */
 	private void isFinish() {
-		switch(itypeCase)
-		{
-			case 0:
-			{
-				break;
-			}
-			case 1:
-			{
-				break;
-			}
-			case 2:
-			{
-				break;
-			}
-			case 3:
-			{
-				if(c>2)
-				{
-					CalArea();
-				}
-				else
-					Toast.makeText(MainActivity.this,"当前顶点暂时不能构成多边形！",Toast.LENGTH_SHORT).show();
-				break;
-			}
-			default:
-			{
-				break;
-			}		
-		}		
+
+		if (c > 2) {
+			CalArea();
+			c = 0;
+		} else
+			Toast.makeText(MainActivity.this, "当前顶点暂时不能构成多边形！",
+					Toast.LENGTH_SHORT).show();
+
 	}
 	
 	/**
@@ -605,39 +584,20 @@ public class MainActivity extends Activity {
 	private void takePicture() {
 		
 		camera.takePicture(null, null, mPictureCallback);
-		if(itypeCase ==3 )
-		{
-			if(listPitchPoints == null)
-				listPitchPoints = new ArrayList<Double>();
-			
-			listPitchPoints.add((double) angle[1]);
-			
-			if(listAzimuthPoints == null)
-				listAzimuthPoints =new ArrayList<Double>();
-			
-			listAzimuthPoints.add((double)angle[0]);
-			c++;
-		}
-		else if(itypeCase ==1)
-		{
-			a++;
-			if (a > 1) {
-				Constants.f2 = mFocus;
-				a = 0;
-				gotoWork();
-			}
-			Constants.f1 = mFocus;
-		}
-		else if(itypeCase ==2)
-		{
-			b++;
-			if (b > 1) {
-				Constants.f2 = mFocus;
-				b = 0;
-				gotoWork();
-			}
-			Constants.f1 = mFocus;
-		}
+		/*
+		 * if (itypeCase == 3) { if (listPitchPoints == null) listPitchPoints =
+		 * new ArrayList<Double>();
+		 * 
+		 * listPitchPoints.add((double) angle[1]);
+		 * 
+		 * if (listAzimuthPoints == null) listAzimuthPoints = new
+		 * ArrayList<Double>();
+		 * 
+		 * listAzimuthPoints.add((double) angle[0]); c++; } else if (itypeCase
+		 * == 1) { a++; if (a > 1) { Constants.f2 = mFocus; a = 0; gotoWork(); }
+		 * Constants.f1 = mFocus; } else if (itypeCase == 2) { b++; if (b > 1) {
+		 * Constants.f2 = mFocus; b = 0; gotoWork(); } Constants.f1 = mFocus; }
+		 */
 	}
 
 	Camera.PictureCallback mPictureCallback = new PictureCallback() {
@@ -721,13 +681,21 @@ public class MainActivity extends Activity {
 				break;
 			case 3://面积公式还需要开发
 				c++;
+				if (listPitchPoints == null)
+					listPitchPoints = new ArrayList<Double>();
+				
+				listPitchPoints.add((double) angle[1]);
+				
+				if (listAzimuthPoints == null)
+					listAzimuthPoints = new ArrayList<Double>();
+				
+				listAzimuthPoints.add((double) angle[0]);
+				
 				mFileHelper.writeSDFile(longitudeValue.getText().toString()
 						+ "&&" + latitudeValue.getText().toString(), PATH
 						+ PicSaveActivity.TXTNAME + ".txt");
 
-				break;
-			default:
-				break;
+
 			}
 			break;
 		case RESULT_CANCELED:
